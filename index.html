@@ -2,7 +2,7 @@
 ;==  INI Values (DO NOT ADJUST THE LINE SPACING!!!)
 ;==========================================================
 [INI_Section]
-version=1
+version=2
 MailShopVersion=6
 
 
@@ -15,7 +15,7 @@ MailShopVersion=6
 SetWorkingDir %A_ScriptDir%
 SetBatchLines -1
 
-niRead,AccessToken,L:\FIVEMAPLES\Theresa\AutoHotKey\Shortcuts.ini, AccessTokens, ShortCutAccessToken, "ERROR - NO KEY FOUND!"
+IniRead,AccessToken,L:\FIVEMAPLES\Theresa\AutoHotKey\Shortcuts.ini, AccessTokens, ShortCutAccessToken, "ERROR - NO KEY FOUND!"
 
 #Include L:\FIVEMAPLES\Theresa\AutoHotKey\PMShortcuts\Lib\ControlColor.ahk
 
@@ -57,7 +57,7 @@ Return
 */
 
 VersionCheck:
-^+#t:: ; c If you didn't trigger this window by pressing 'Win+F2', then it must mean that you had an update last night! Yay! (you can click OK)
+^!t:: ; c If you didn't trigger this window by pressing 'Win+F2', then it must mean that you had an update last night! Yay! (you can click OK)
 {
 ; IniRead, OutputVar, C:\Temp\myfile.ini, section2, key
 ; MsgBox, The value is %OutputVar%.
@@ -75,7 +75,7 @@ if (CurrentVer < NewVer)
 Return
 }
 UpdateScript:
-^+#u:: ;c 🌟 Update Script ⌨️ Ctrl+Shift+Win+u | Typing Ctrl+Shift+Win+u will trigger an update of the script - also automatically triggered every morning at 1:15am
+^!u:: ;c 🌟 Update Script ⌨️ Ctrl+Shift+Win+u | Typing Ctrl+Shift+Win+u will trigger an update of the script - also automatically triggered every morning at 1:15am
 {
 	UrlDownloadToFile, %AccessToken%, ShortcutGUI.ahk ;*[ShortcutGUI]
 	;Progress, w250,,, Hold yer ponies,  I'm updating…
@@ -179,7 +179,7 @@ Return
 ;===========================================================
 
 ButtonEmailNCOAPAF:
-+^m:: ;Ctrl+Shift+m | Ctrl+Shift+m will trigger this code
++^n:: ;Ctrl+Shift+n | Ctrl+Shift+n will trigger this code
 
 	m := ComObjCreate("Outlook.Application").CreateItem(0) ; 0 = olMailItem
 	m.Subject := "PAF Form for NCOA"

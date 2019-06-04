@@ -2,7 +2,7 @@
 ;==  INI Values (DO NOT ADJUST THE LINE SPACING!!!)
 ;==========================================================
 [INI_Section]
-version=3
+version=4
 MailShopVersion=6
 
 
@@ -41,7 +41,7 @@ ButtonRestartToolkit:
 	Progress,  Off
 	MsgBox, 0, , Rebooted - please click 'OK' to proceed., 1
 	Reload
-	L:\FIVEMAPLES\Theresa\AutoHotKey\Shortcuts.ini
+	;L:\FIVEMAPLES\Theresa\AutoHotKey\Shortcuts.ini
 }
 
 

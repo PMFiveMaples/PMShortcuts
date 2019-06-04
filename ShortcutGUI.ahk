@@ -2,7 +2,7 @@
 ;==  INI Values (DO NOT ADJUST THE LINE SPACING!!!)
 ;==========================================================
 [INI_Section]
-version=4
+version=5
 MailShopVersion=6
 
 
@@ -74,6 +74,7 @@ if (CurrentVer < NewVer)
 	}
 Return
 }
+ButtonForceUpdate:
 UpdateScript:
 ^!u:: ;c 🌟 Update Script ⌨️ Ctrl+Shift+Win+u | Typing Ctrl+Shift+Win+u will trigger an update of the script - also automatically triggered every morning at 1:15am
 {
@@ -111,6 +112,7 @@ UpdateScript:
 		Gui Add, Button, x262 y80 w248 h36, Email Proofs	
 		Gui Add, Button, x262 y120 w248 h36, Email Firebird Proofs
 		Gui Add, Button, x262 y160 w248 h36, Email Past Due Invoices
+		Gui Add, Button, x262 y200 w248 h36, Force Update
 
 		Gui Show, w517 h420, PM Shortcuts
 

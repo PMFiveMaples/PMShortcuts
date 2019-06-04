@@ -15,14 +15,14 @@ MailShopVersion=6
 SetWorkingDir %A_ScriptDir%
 SetBatchLines -1
 
-niRead,AccessToken,\\Watson\Production\X\DP Use\Shared AHKs\Toolkit.ini, AccessTokens, ShortCutAccessToken, "ERROR - NO KEY FOUND!"
+niRead,AccessToken,L:\FIVEMAPLES\Theresa\AutoHotKey\Shortcuts.ini, AccessTokens, ShortCutAccessToken, "ERROR - NO KEY FOUND!"
 
 #Include L:\FIVEMAPLES\Theresa\AutoHotKey\PMShortcuts\Lib\ControlColor.ahk
 
 ;===========================================================
 ;==  Update Module
 ;===========================================================
-; Files if hosted on Github    : See AccessToken in X:\DP Use\Shared AHKs\Toolkit.ini
+; Files if hosted on Github    : L:\FIVEMAPLES\Theresa\AutoHotKey\Shortcuts.ini
 
 SetTimer UpdateCheck, 60000 ; Check each minute
 ;Return
@@ -41,7 +41,7 @@ ButtonRestartToolkit:
 	Progress,  Off
 	MsgBox, 0, , Rebooted - please click 'OK' to proceed., 1
 	Reload
-	X:\DP Use\Shared AHKs\Toolkit.ini
+	L:\FIVEMAPLES\Theresa\AutoHotKey\Shortcuts.ini
 }
 
 
@@ -61,9 +61,9 @@ VersionCheck:
 {
 ; IniRead, OutputVar, C:\Temp\myfile.ini, section2, key
 ; MsgBox, The value is %OutputVar%.
-; FileReadLine, %CurrentVer%, ShortcutToolkit.ahk, 5
-; FileReadLine, %NewVer%, //raw.githubusercontent.com/MarvinFiveMaples/ShortcutToolkit/master/ShortcutToolkit.ahk?raw=true, 5
-IniRead, CurrentVer, PMShortcuts.ahk, INI_Section, version
+; FileReadLine, %CurrentVer%, ShortcutGUI.ahk, 5
+; FileReadLine, %NewVer%, https://raw.githubusercontent.com/theresa034/PMShortcuts/master/ShortcutGUI.ahk?token=AC2LTXPVTNFEJCI5HBCAEQS46ZV52, 5
+IniRead, CurrentVer, ShortcutGUI.ahk, INI_Section, version
 UrlDownloadToFile, %AccessToken%, JunkKit.ahk ; PRODUCTION
 IniRead, NewVer, JunkKit.ahk, INI_Section, version
 FileDelete, JunkKit.ahk
@@ -77,7 +77,7 @@ Return
 UpdateScript:
 ^+#u:: ;c 🌟 Update Script ⌨️ Ctrl+Shift+Win+u | Typing Ctrl+Shift+Win+u will trigger an update of the script - also automatically triggered every morning at 1:15am
 {
-	UrlDownloadToFile, %AccessToken%, ShortcutToolkit.ahk ;*[ShortcutToolkit]
+	UrlDownloadToFile, %AccessToken%, ShortcutGUI.ahk ;*[ShortcutGUI]
 	;Progress, w250,,, Hold yer ponies,  I'm updating…
 	MsgBox If you see me, I either just updated when you triggered me to, or I updated last night. Either way, please click 'OK', and go about your day! Also, press 'Win+F2' to open up a quick help cheat-sheet.
 	Reload
@@ -131,7 +131,8 @@ UpdateScript:
 
 ButtonPricingBeta:
 Run, L:\FiveMaplesSales\PRICES\pricing-BETA.xlsm
-Return
+Return
+
 ;===========================================================
 ;==  Pricing Old
 ;===========================================================

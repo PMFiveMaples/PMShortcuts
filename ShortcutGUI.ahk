@@ -2,7 +2,7 @@
 ;==  INI Values (DO NOT ADJUST THE LINE SPACING!!!)
 ;==========================================================
 [INI_Section]
-version=2
+version=3
 MailShopVersion=6
 
 
@@ -17,7 +17,7 @@ SetBatchLines -1
 
 IniRead,AccessToken,L:\FIVEMAPLES\Theresa\AutoHotKey\Shortcuts.ini, AccessTokens, ShortCutAccessToken, "ERROR - NO KEY FOUND!"
 
-#Include L:\FIVEMAPLES\Theresa\AutoHotKey\PMShortcuts\Lib\ControlColor.ahk
+#Include L:\FIVEMAPLES\Theresa\AutoHotKey\PMShortcuts\PMShortcuts\Lib\ControlColor.ahk
 
 ;===========================================================
 ;==  Update Module

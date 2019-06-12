@@ -2,7 +2,7 @@
 ;==  INI Values (DO NOT ADJUST THE LINE SPACING!!!)
 ;==========================================================
 [INI_Section]
-version=5
+version=6
 MailShopVersion=6
 
 
@@ -44,6 +44,7 @@ ButtonRestartToolkit:
 	;L:\FIVEMAPLES\Theresa\AutoHotKey\Shortcuts.ini
 }
 
+
 UpdateCheck:
 If (A_Hour = 01 And A_Min = 12)
 {
@@ -75,7 +76,7 @@ Return
 }
 ButtonForceUpdate:
 UpdateScript:
-^!u:: ;c 🌟 Update Script ⌨️ Ctrl+Shift+Win+u | Typing Ctrl+Shift+Win+u will trigger an update of the script - also automatically triggered every morning at 1:15am
+;^!u:: ;c 🌟 Update Script ⌨️ Ctrl+Shift+Win+u | Typing Ctrl+Shift+Win+u will trigger an update of the script - also automatically triggered every morning at 1:15am
 {
 	UrlDownloadToFile, %AccessToken%, ShortcutGUI.ahk ;*[ShortcutGUI]
 	;Progress, w250,,, Hold yer ponies,  I'm updating…
@@ -180,7 +181,7 @@ Return
 ;===========================================================
 
 ButtonEmailNCOAPAF:
-+^n:: ;Ctrl+Shift+n | Ctrl+Shift+n will trigger this code
+;+^n:: ;Ctrl+Shift+n | Ctrl+Shift+n will trigger this code
 
 	m := ComObjCreate("Outlook.Application").CreateItem(0) ; 0 = olMailItem
 	m.Subject := "PAF Form for NCOA"
@@ -196,7 +197,7 @@ ButtonEmailNCOAPAF:
 ;===========================================================
 
 ButtonEmailProofs:
-+^p:: ;Ctrl+Shift+p | Ctrl+Shift+p will trigger this code
+;+^p:: ;Ctrl+Shift+p | Ctrl+Shift+p will trigger this code
 
 	m := ComObjCreate("Outlook.Application").CreateItem(0) ; 0 = olMailItem
 	m.Subject := "[Work Order]-[Customer]-[Proof Type]"
@@ -211,7 +212,7 @@ ButtonEmailProofs:
 ;===========================================================
 
 ButtonEmailFirebirdProofs:
-+^f:: ;Ctrl+Shift+f | Ctrl+Shift+f will trigger this code
+;+^f:: ;Ctrl+Shift+f | Ctrl+Shift+f will trigger this code
 
 	m := ComObjCreate("Outlook.Application").CreateItem(0) ; 0 = olMailItem
 	m.Subject := "IMB Verification for Five Maples Job [Work Order]"
@@ -226,7 +227,7 @@ ButtonEmailFirebirdProofs:
 ;===========================================================
 
 ButtonEmailPastDueInvoices:
-+^i:: ;Ctrl+Shift+i | Ctrl+Shift+i will trigger this code
+;+^i:: ;Ctrl+Shift+i | Ctrl+Shift+i will trigger this code
 
 	m := ComObjCreate("Outlook.Application").CreateItem(0) ; 0 = olMailItem
 	m.Subject := "Past Due Invoice"

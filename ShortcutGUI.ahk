@@ -2,7 +2,7 @@
 ;==  INI Values (DO NOT ADJUST THE LINE SPACING!!!)
 ;==========================================================
 [INI_Section]
-version=8
+version=9
 MailShopVersion=6
 
 
@@ -241,10 +241,8 @@ ButtonEmailPastDueInvoices:
 ;==  Enter Estimate Comments
 ;===========================================================
 
-;ButtonEstimateComments:
-;{
-;gui, submit
-;sleep, 69
-;send, *This estimate is subject to change based on review of live data, material, and actual quantities.* {enter}{enter}MAIL FILE: One list supplied in Excel or CSV format. Additional lists/tabs are $15 each.{enter}{enter}CLIENT SUPPLIED MATERIALS: list any materials to be supplied by client{enter}{enter}MATERIALS SUPPLIED BY FIVE MAPLES: list any materials to be supplied by Five Maples (not including paper stock for printing){enter}{enter}VARIABLE PRINTING: copy from the wizard{enter}{enter}STATIC PRINTING: copy from the wizard{enter}{enter}POSTAGE: Identify the mail class, postage method, drop and max weight {enter}{enter}ESTIMATED TURNAROUND TIME: if specifying turnaround time, determine based on receipt of data and materials.{enter}{enter}CLIENT SERVICES: describe/copy from the wizard {enter}{enter}OPTIONAL SERVICES:{enter}To remove duplicates from list, add $65.{enter}Additional letter versions, $25 each {enter}For 4/4 printing, add $--{enter}Additional charge to return materials to client. {enter}Any F;oreign has additional preparation and postage cost{enter}Data Work: Creation or correction of salutations or other data clean-up work is additional. We will estimate cost and not proceed without prior approval from client if clean-up is needed.{enter}{enter}TERMS: {enter}{enter}You may cancel or make changes to this program at any time. Cancellation will result in billing for work done as of the date of the cancellation.{enter}{enter}Design pricing includes two rounds of author’s alterations. Additional rounds of changes charged at $85/hr. Changes to files sent as “print-ready” and changes at variable proofing stage are charged at $85/hr. {enter}{enter}Removal or correction of names at your request from lists after the list work has started will result in additional charges.{enter}{enter}Payment is due 30 days from invoice date, which is the date of the mailing.{enter}{enter}If estimated postage is more than $1000, an estimated postage invoice will be sent and is due prior to the mailing. Any difference to t;he actual final postage will be adjusted on the final invoice. Postage that is less than $1000 is billed on the same invoice as the other services and is not due in advance.{enter}{enter}Mailings are picked up and audited at the Five Maples plant by the USPS.{enter}{enter}An additional postage discount may be available in some cases if Five Maples transports the mailing to a USPS sorting facility. If so, we will pass the postal discount on to you, net of preparation and transportation.{enter}{enter}Fees are a combination of fixed step-up charges and price-per-piece. Variation in the amount of records in the lists or number of pieces printed and mailed will result in a variation in the price.
-;Return
-;}
+ButtonEstimateComments:
+{
+Run, L:\FIVEMAPLES\Theresa\AutoHotKey\PMShortcuts\EstimateComments.docx
+return
+}

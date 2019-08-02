@@ -2,7 +2,7 @@
 ;==  INI Values (DO NOT ADJUST THE LINE SPACING!!!)
 ;==========================================================
 [INI_Section]
-version=9
+version=10	
 MailShopVersion=6
 
 
@@ -107,6 +107,7 @@ UpdateScript:
 		Gui Add, Button, x7 y160 w248 h36, PM Platform
 		Gui Add, Button, x7 y200 w248 h36, Weekly Hours
 		Gui Add, Button, x7 y240 w248 h36, Work Order Checklist
+		Gui Add, Button, x7 y280 w248 h36, 3PP Sheet
 		
 		Gui Add, Button, x262 y40 w248 h36, Email NCOA PAF
 		Gui Add, Button, x262 y80 w248 h36, Email Proofs	
@@ -175,6 +176,15 @@ ButtonWeeklyHours:
 ButtonWorkOrderChecklist:
 Run, https://theresa034.github.io/WorkOrderChecklist/workorderchecklist.html
 Return
+
+;===========================================================
+;==  3PP Form
+;===========================================================
+
+Button3PPSheet:
+Run, L:\FIVEMAPLES\Procedures and Training\Procedures - Project Management\3rd Party Proofing\New 2018\VariableDataProofingForm_2019-Editable.pdf
+Return
+
 
 ;===========================================================
 ;==  Email NCOA PAF Packet

@@ -1,8 +1,8 @@
-﻿/*;========================================================
+/*;========================================================
 ;==  INI Values (DO NOT ADJUST THE LINE SPACING!!!)
 ;==========================================================
 [INI_Section]
-version=11	
+version=12	
 MailShopVersion=6
 
 
@@ -101,13 +101,12 @@ UpdateScript:
 		Gui Font, s12, Segoe Print
 		ControlColor(hTxt, hMainWnd, 0x25408F, 0xFFFFFF)
 		Gui Font, s12, Segoe Print
-		Gui Add, Button, x7 y40 w248 h36, Pricing Beta
-		Gui Add, Button, x7 y80 w248 h36, Pricing Old
-		Gui Add, Button, x7 y120 w248 h36, Turnaround Times
-		Gui Add, Button, x7 y160 w248 h36, PM Platform
-		Gui Add, Button, x7 y200 w248 h36, Weekly Hours
-		Gui Add, Button, x7 y240 w248 h36, Work Order Checklist
-		Gui Add, Button, x7 y280 w248 h36, 3PP Sheet
+		Gui Add, Button, x7 y40 w248 h36, Pricing
+		Gui Add, Button, x7 y80 w248 h36, Turnaround Times
+		Gui Add, Button, x7 y120 w248 h36, PM Platform
+		Gui Add, Button, x7 y160 w248 h36, Weekly Hours
+		Gui Add, Button, x7 y200 w248 h36, Work Order Checklist
+		Gui Add, Button, x7 y240 w248 h36, 3PP Sheet
 		
 		Gui Add, Button, x262 y40 w248 h36, Email NCOA PAF
 		Gui Add, Button, x262 y80 w248 h36, Email Proofs	
@@ -116,6 +115,7 @@ UpdateScript:
 		Gui Add, Button, x262 y200 w248 h36, Force Update
 		Gui Add, Button, x262 y240 w248 h36, Estimate Comments
 
+		Gui Add, Picture, x185 y280 w140 h140, L:\FIVEMAPLES\Theresa\AutoHotKey\PMShortcuts\PMShortcuts\hedgehog.jpg
 		Gui Show, w517 h420, PM Shortcuts
 
 		Return
@@ -130,19 +130,13 @@ UpdateScript:
 }
 
 ;===========================================================
-;==  Pricing Beta
+;==  Pricing
 ;===========================================================
 
-ButtonPricingBeta:
-Run, L:\FiveMaplesSales\PRICES\pricing-BETA.xlsm
-Return
-;===========================================================
-;==  Pricing Old
-;===========================================================
-
-ButtonPricingOld:
-Run, L:\FiveMaplesSales\PRICES\pricing-190926.xlsb
+ButtonPricing:
+Run, L:\FiveMaplesSales\PRICES\pricing-2020 1-6-20.xlsb
 Return
+
 
 ;===========================================================
 ;==  Turnaround Times
@@ -212,7 +206,7 @@ ButtonEmailProofs:
 	m := ComObjCreate("Outlook.Application").CreateItem(0) ; 0 = olMailItem
 	m.Subject := "[Work Order]-[Customer]-[Proof Type]"
 	m.To := ""
-	m.Body := "Hi [Client Name]!`n`nAttached are the [Proof Type] proofs for your [Project] mailing.`n`nPlease let me know if everything looks good or if you’d like to see changes.`n`nThanks! "
+	m.Body := "Hi [Client Name]!`n`nAttached are the [Proof Type] proofs for your [Project] mailing.`n`nPlease let me know if everything looks good or if you would like to see changes.`n`nThanks! "
 	m.Display ;to display the email message...and the really cool part, if you leave this line out, it will not show the window............... but the m.send below will still send the email!!!
 	
 	Return

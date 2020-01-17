@@ -2,7 +2,7 @@
 ;==  INI Values (DO NOT ADJUST THE LINE SPACING!!!)
 ;==========================================================
 [INI_Section]
-version=12	
+version=15	
 MailShopVersion=6
 
 
@@ -114,6 +114,8 @@ UpdateScript:
 		Gui Add, Button, x262 y160 w248 h36, Email Past Due Invoices
 		Gui Add, Button, x262 y200 w248 h36, Force Update
 		Gui Add, Button, x262 y240 w248 h36, Estimate Comments
+		
+		Gui Add, Picture, x185 y280 w140 h140, L:\FIVEMAPLES\Theresa\AutoHotKey\PMShortcuts\PMShortcuts\hedgehog.jpg
 
 		Gui Show, w517 h420, PM Shortcuts
 

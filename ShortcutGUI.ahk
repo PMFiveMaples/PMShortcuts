@@ -115,7 +115,6 @@ UpdateScript:
 		Gui Add, Button, x262 y200 w248 h36, Force Update
 		Gui Add, Button, x262 y240 w248 h36, Estimate Comments
 
-		Gui Add, Picture, x185 y280 w140 h140, L:\FIVEMAPLES\Theresa\AutoHotKey\PMShortcuts\PMShortcuts\hedgehog.jpg
 		Gui Show, w517 h420, PM Shortcuts
 
 		Return
@@ -130,13 +129,12 @@ UpdateScript:
 }
 
 ;===========================================================
-;==  Pricing
+;==  Pricing Old
 ;===========================================================
 
 ButtonPricing:
 Run, L:\FiveMaplesSales\PRICES\pricing-2020 1-6-20.xlsb
 Return
-
 
 ;===========================================================
 ;==  Turnaround Times
@@ -206,7 +204,7 @@ ButtonEmailProofs:
 	m := ComObjCreate("Outlook.Application").CreateItem(0) ; 0 = olMailItem
 	m.Subject := "[Work Order]-[Customer]-[Proof Type]"
 	m.To := ""
-	m.Body := "Hi [Client Name]!`n`nAttached are the [Proof Type] proofs for your [Project] mailing.`n`nPlease let me know if everything looks good or if you would like to see changes.`n`nThanks! "
+	m.Body := "Hi [Client Name]!`n`nAttached are the [Proof Type] proofs for your [Project] mailing.`n`nPlease let me know if everything looks good or if you’d like to see changes.`n`nThanks! "
 	m.Display ;to display the email message...and the really cool part, if you leave this line out, it will not show the window............... but the m.send below will still send the email!!!
 	
 	Return

@@ -2,7 +2,7 @@
 ;==  INI Values (DO NOT ADJUST THE LINE SPACING!!!)
 ;==========================================================
 [INI_Section]
-version=15	
+version=17	
 MailShopVersion=6
 
 
@@ -62,7 +62,7 @@ VersionCheck:
 ; IniRead, OutputVar, C:\Temp\myfile.ini, section2, key
 ; MsgBox, The value is %OutputVar%.
 ; FileReadLine, %CurrentVer%, ShortcutGUI.ahk, 5
-; FileReadLine, %NewVer%, https://raw.githubusercontent.com/theresa034/PMShortcuts/master/ShortcutGUI.ahk?token=AC2LTXPVTNFEJCI5HBCAEQS46ZV52, 5
+; FileReadLine, %NewVer%, https://raw.githubusercontent.com/pmfivemaples/PMShortcuts/master/ShortcutGUI.ahk, 5
 IniRead, CurrentVer, ShortcutGUI.ahk, INI_Section, version
 UrlDownloadToFile, %AccessToken%, JunkKit.ahk ; PRODUCTION
 IniRead, NewVer, JunkKit.ahk, INI_Section, version
@@ -97,7 +97,7 @@ UpdateScript:
 		Gui +hWndhMainWnd
 		Gui Color, 0x25408F
 		Gui Font, s14, Segoe Print
-		Gui Add, Text, hWndhTxt x7 y3 w517 h32 +0x200 +Center -Background, Welcome to the PM Shortcut Menu
+		Gui Add, Text, hWndhTxt x7 y3 w517 h32 +0x200 +Center -Background, Welcome to the PM Shortcut Menu!
 		Gui Font, s12, Segoe Print
 		ControlColor(hTxt, hMainWnd, 0x25408F, 0xFFFFFF)
 		Gui Font, s12, Segoe Print
@@ -168,7 +168,7 @@ ButtonWeeklyHours:
 ;===========================================================
 
 ButtonWorkOrderChecklist:
-Run, https://theresa034.github.io/WorkOrderChecklist/workorderchecklist.html
+Run, https://pmfivemaples.github.io/WorkOrderChecklist/workorderchecklist.html
 Return
 
 ;===========================================================

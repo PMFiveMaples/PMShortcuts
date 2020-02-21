@@ -97,7 +97,7 @@ UpdateScript:
 		Gui +hWndhMainWnd
 		Gui Color, 0x25408F
 		Gui Font, s14, Segoe Print
-		Gui Add, Text, hWndhTxt x7 y3 w517 h32 +0x200 +Center -Background, Welcome to the PM Shortcut Menu!
+		Gui Add, Text, hWndhTxt x7 y3 w517 h32 +0x200 +Center -Background, Welcome to the PM Shortcut Menu
 		Gui Font, s12, Segoe Print
 		ControlColor(hTxt, hMainWnd, 0x25408F, 0xFFFFFF)
 		Gui Font, s12, Segoe Print

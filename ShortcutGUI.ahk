@@ -2,7 +2,7 @@
 ;==  INI Values (DO NOT ADJUST THE LINE SPACING!!!)
 ;==========================================================
 [INI_Section]
-version=20	
+version=21	
 MailShopVersion=6
 
 
@@ -115,8 +115,7 @@ UpdateScript:
 		Gui Add, Button, x262 y200 w248 h36, Force Update
 		Gui Add, Button, x262 y240 w248 h36, Estimate Comments
 		
-		Gui Add, Picture, x185 y280 w140 h140, L:\FIVEMAPLES\Theresa\AutoHotKey\PMShortcuts\PMShortcuts\hedgehog.jpg
-
+		Gui Add, Text, hWndhTxt x7 y3 w517 h32 +0x200 +Center -Background, Version: 1.1
 		Gui Show, w517 h420, PM Shortcuts
 
 		Return
@@ -135,7 +134,7 @@ UpdateScript:
 ;===========================================================
 
 ButtonPricing:
-Run, L:\FiveMaplesSales\PRICES\pricing-2020 3-3.xlsb
+Run, L:\FiveMaplesSales\PRICES\pricing-2020 7-20.xlsb
 Return
 
 ;===========================================================

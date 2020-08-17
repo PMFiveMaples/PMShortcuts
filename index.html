@@ -2,7 +2,7 @@
 ;==  INI Values (DO NOT ADJUST THE LINE SPACING!!!)
 ;==========================================================
 [INI_Section]
-version=21	
+version=22	
 MailShopVersion=6
 
 
@@ -134,7 +134,7 @@ UpdateScript:
 ;===========================================================
 
 ButtonPricing:
-Run, L:\FiveMaplesSales\PRICES\pricing-2020 7-20.xlsb
+Run, L:\FiveMaplesSales\PRICES\Pricing Current Version.xlsb
 Return
 
 ;===========================================================
